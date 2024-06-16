@@ -7,4 +7,13 @@
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
   </head>
   <body></body>
+  <script>
+    const pre = document.createElement("pre");
+    pre.innerHTML = JSON.stringify({
+      platform: window.Telegram.WebApp.platform,
+      version: window.Telegram.WebApp.version,
+      initParams: window.Telegram.WebView.initParams,
+    });
+    document.body.appendChild(pre);
+  </script>
 </html>
